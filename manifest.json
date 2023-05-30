@@ -1,0 +1,32 @@
+{
+    "name": "Cibus",
+    "version": "0.1.0",
+    "description": "Saving timestamps in YT videos",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.www.cibus-sodexo.co.il/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.www.mysodexo.co.il/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+      
+        ],
+        "matches": ["https://*.www.mysodexo.co.il/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+      
+      },
+      "default_title": "My YT Bookmarks",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
